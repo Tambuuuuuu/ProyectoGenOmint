@@ -9,21 +9,21 @@ namespace Negocio
 
 		public Usuario GenerarUsuarioRandom()
 		{
-			string[] nombresBase = { "admin", "user", "player", "guest", "test" };
+			string[] nombresBase = { "Tomas", "Franco", "Juan", "Milagros", "Anna" };
 
 			string nombreUsuario = nombresBase[random.Next(nombresBase.Length)]
 								   + random.Next(100, 999);
 
-			string contrasenia = GenerarContraseniaRandom();
+			string contraseña = GenerarContraseñaRandom();
 
 			return new Usuario
 			{
 				NombreUsuario = nombreUsuario,
-				Contrasenia = contrasenia
-			};
+				Contraseña = contraseña
+            };
 		}
 
-		private string GenerarContraseniaRandom()
+		private string GenerarContraseñaRandom()
 		{
 			const string caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 			char[] password = new char[8];
